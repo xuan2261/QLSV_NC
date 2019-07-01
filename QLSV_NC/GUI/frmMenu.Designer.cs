@@ -51,7 +51,6 @@
             this.thôngTinĐiểmSinhViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhSáchSinhViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.điểmTổngKếtCủaSinhViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tlpMenu.SuspendLayout();
             this.plnMain.SuspendLayout();
@@ -301,8 +300,7 @@
             // thốngKêToolStripMenuItem
             // 
             this.thốngKêToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.danhSáchSinhViênToolStripMenuItem,
-            this.điểmTổngKếtCủaSinhViênToolStripMenuItem});
+            this.danhSáchSinhViênToolStripMenuItem});
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
@@ -312,12 +310,7 @@
             this.danhSáchSinhViênToolStripMenuItem.Name = "danhSáchSinhViênToolStripMenuItem";
             this.danhSáchSinhViênToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.danhSáchSinhViênToolStripMenuItem.Text = "Danh sách Sinh Viên";
-            // 
-            // điểmTổngKếtCủaSinhViênToolStripMenuItem
-            // 
-            this.điểmTổngKếtCủaSinhViênToolStripMenuItem.Name = "điểmTổngKếtCủaSinhViênToolStripMenuItem";
-            this.điểmTổngKếtCủaSinhViênToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.điểmTổngKếtCủaSinhViênToolStripMenuItem.Text = "Điểm tổng kết của Sinh Viên";
+            this.danhSáchSinhViênToolStripMenuItem.Click += new System.EventHandler(this.danhSáchSinhViênToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -375,7 +368,6 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinĐiểmSinhViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem danhSáchSinhViênToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem điểmTổngKếtCủaSinhViênToolStripMenuItem;
         private System.Windows.Forms.Label lblTenTaiKhoan;
     }
 }

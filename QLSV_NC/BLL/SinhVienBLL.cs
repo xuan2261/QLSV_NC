@@ -86,5 +86,16 @@ namespace QLSV_NC.BLL
             DataTable dt = dal.GetTable(sql);
             return dt;
         }
+
+        //ham thong ke sinh vien trong lop
+        public DataTable TKeTheoMaLop(string maLop)
+        {
+            string sql = "select SV.maSV, SV.hoTen, SV.ngaySinh, SV.soDT, SV.maLop, LOP.tenLop " +
+                           "from SinhVien SV inner join Lop LOP on SV.maLop = LOP.maLop " +
+                            "where LOP.maLop = '" + maLop + "'";
+            DataTable dt = new DataTable();
+            dt = dal.GetTable(sql);
+            return dt;
+        }
     }
 }

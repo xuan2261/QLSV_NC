@@ -131,5 +131,11 @@ namespace QLSV_NC
             UcThongTinDiem ucThongTinDiem = new UcThongTinDiem();
             ChuyenDoi(ucThongTinDiem);
         }
+
+        private void danhSáchSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UcTKeDSSV ucTKeDSSV = new UcTKeDSSV();
+            ChuyenDoi(ucTKeDSSV);
+        }
     }
 }

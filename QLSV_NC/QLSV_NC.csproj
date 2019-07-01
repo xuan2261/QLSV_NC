@@ -154,6 +154,12 @@
     <Compile Include="GUI\UcThongTinDiem.Designer.cs">
       <DependentUpon>UcThongTinDiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UcTKeDSSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UcTKeDSSV.Designer.cs">
+      <DependentUpon>UcTKeDSSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GUI\UcSinhVien.cs">
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UcThongTinDiem.resx">
       <DependentUpon>UcThongTinDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UcTKeDSSV.resx">
+      <DependentUpon>UcTKeDSSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
