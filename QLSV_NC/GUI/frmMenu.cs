@@ -22,17 +22,19 @@ namespace QLSV_NC
             lblTenTaiKhoan.Text = "Xin chào " + taiKhoan;
             if (taiKhoan == "sinhvien")
             {
-                tlpMenu.Enabled = false;
+                tlpMenu.Visible = false;
                 thốngKêToolStripMenuItem.Enabled = false;
                 quảnLýNgườiDùngToolStripMenuItem.Enabled = false;
             }
             if (taiKhoan == "giaovien")
             {
-                btnQLGV.Enabled = false;
-                btnQLHP.Enabled = false;
-                btnQLLop.Enabled = false;
-                btnQLCTDT.Enabled = false;
-                btnQLDKy.Enabled = false;
+
+                btnQLGV.Visible = false;
+                btnQLHP.Visible = false;
+                btnQLLop.Visible = false;
+                btnQLCTDT.Visible = false;
+                btnQLDKy.Visible = false;
+
                 quảnLýNgườiDùngToolStripMenuItem.Enabled = false;
             }
         }
