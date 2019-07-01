@@ -65,9 +65,6 @@ namespace QLSV_NC.GUI
                 {
                     this.Close();
                     MessageBox.Show("Đổi mật khẩu thành công! Hãy đăng xuất và đăng nhập lại!");
-                    //frmMenu frmMenu = new frmMenu(taiKhoan);
-                    //frmMenu.đăngXuấtToolStripMenuItem_Click(sender, e);
-                    //frmMenu.Close();
                 }
                 else
                 {

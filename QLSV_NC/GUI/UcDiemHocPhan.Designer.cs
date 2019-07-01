@@ -70,6 +70,7 @@
             this.btnTimKiem.Size = new System.Drawing.Size(67, 28);
             this.btnTimKiem.TabIndex = 22;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // label5
             // 

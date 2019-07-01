@@ -220,5 +220,10 @@ namespace QLSV_NC.GUI
             diemHP = float.Parse(txtDiemCC.Text.ToString()) * 0.1 + float.Parse(txtDiemTX.Text.ToString().Trim()) * 0.3 + float.Parse(txtDiemThi.Text.ToString().Trim()) * 0.6;
             txtDiemHP.Text = Math.Round( diemHP, 2).ToString();
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            dgvDsDiemHP.DataSource = bll.TimKiemDiemHP(txtTimKiem.Text.Trim());
+        }
     }
 }
