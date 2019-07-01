@@ -13,9 +13,28 @@ namespace QLSV_NC
 {
     public partial class frmMenu : Form
     {
-        public frmMenu()
+        string taiKhoan;
+
+        public frmMenu( string taikhoan)
         {
             InitializeComponent();
+            taiKhoan = taikhoan;
+            lblTenTaiKhoan.Text = "Xin chào " + taiKhoan;
+            if (taiKhoan == "sinhvien")
+            {
+                tlpMenu.Enabled = false;
+                thốngKêToolStripMenuItem.Enabled = false;
+                quảnLýNgườiDùngToolStripMenuItem.Enabled = false;
+            }
+            if (taiKhoan == "giaovien")
+            {
+                btnQLGV.Enabled = false;
+                btnQLHP.Enabled = false;
+                btnQLLop.Enabled = false;
+                btnQLCTDT.Enabled = false;
+                btnQLDKy.Enabled = false;
+                quảnLýNgườiDùngToolStripMenuItem.Enabled = false;
+            }
         }
 
         private void ChuyenDoi(UserControl uc)
@@ -74,6 +93,41 @@ namespace QLSV_NC
         {
             new DAL().myClose();
             Application.Exit();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAbout frmAbout = new frmAbout();
+            frmAbout.ShowDialog();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        public void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDangNhap frmDangNhap = new frmDangNhap();
+            frmDangNhap.Show();
+            this.Hide();
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDoiMatKhau frmDoiMatKhau = new frmDoiMatKhau(taiKhoan);
+            frmDoiMatKhau.ShowDialog();
+        }
+
+        private void thôngTinĐiểmSinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UcThongTinDiem ucThongTinDiem = new UcThongTinDiem();
+            ChuyenDoi(ucThongTinDiem);
         }
     }
 }

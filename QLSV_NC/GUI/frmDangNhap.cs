@@ -20,7 +20,7 @@ namespace QLSV_NC.GUI
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DangNhapBLL().TimKiem(txtTaiKhoan.Text.Trim(), txtMatKhau.Text.Trim());
+            DataTable dt = new TaiKhoanBLL().TimKiem(txtTaiKhoan.Text.Trim(), txtMatKhau.Text.Trim());
             try
             {
                 if (txtTaiKhoan.Text.Trim() == string.Empty)
@@ -38,7 +38,8 @@ namespace QLSV_NC.GUI
                 else
                 {
                     MessageBox.Show("Đăng nhập thành công");
-                    new frmMenu().Show();
+                    string taikhoan = dt.Rows[0][0].ToString();
+                    new frmMenu(taikhoan).Show();
                     Hide();
                 }
             }
@@ -61,6 +62,11 @@ namespace QLSV_NC.GUI
             {
                 btnDangNhap_Click(sender, e);
             }
+        }
+
+        private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
